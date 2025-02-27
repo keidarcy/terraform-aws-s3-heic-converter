@@ -23,7 +23,7 @@ This Terraform module sets up an automated HEIC to JPEG image conversion pipelin
 
 ```hcl
 module "heic_converter" {
-  source = "github.com/your-username/terraform-aws-s3-heic-converter"
+  source  = "keidarcy/s3-heic-converter/aws"
 
   name = "my-image-converter"
 
