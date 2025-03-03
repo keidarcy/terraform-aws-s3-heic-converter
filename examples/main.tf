@@ -21,6 +21,9 @@ module "heic_converter" {
   source_bucket_name = var.source_bucket_name
   dest_bucket_name   = var.dest_bucket_name
 
+  # Optional: Control bucket versioning
+  enable_bucket_versioning = var.enable_bucket_versioning
+
   tags = {
     Project   = var.name
     ManagedBy = "terraform"

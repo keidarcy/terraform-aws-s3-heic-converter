@@ -57,14 +57,14 @@ resource "aws_s3_bucket" "processed" {
 resource "aws_s3_bucket_versioning" "source" {
   bucket = aws_s3_bucket.source.id
   versioning_configuration {
-    status = "Enabled"
+    status = var.enable_bucket_versioning ? "Enabled" : "Disabled"
   }
 }
 
 resource "aws_s3_bucket_versioning" "processed" {
   bucket = aws_s3_bucket.processed.id
   versioning_configuration {
-    status = "Enabled"
+    status = var.enable_bucket_versioning ? "Enabled" : "Disabled"
   }
 }
 

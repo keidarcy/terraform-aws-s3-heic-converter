@@ -18,3 +18,9 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "enable_bucket_versioning" {
+  description = "Enable versioning for both source and processed buckets"
+  type        = bool
+  default     = true
+}

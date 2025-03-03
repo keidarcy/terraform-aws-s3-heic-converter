@@ -68,6 +68,9 @@ The Lambda function uses:
 | Name | Description | Type | Required |
 |------|-------------|------|----------|
 | name | Name prefix for all resources created by this module | string | yes |
+| source_bucket_name | Name of the source bucket | string | yes |
+| dest_bucket_name | Name of the destination bucket | string | yes |
+| enable_bucket_versioning | Enable versioning for both source and processed buckets | bool | no |
 | tags | A map of tags to add to all resources | map(string) | no |
 
 ## Outputs
